@@ -12,11 +12,11 @@
 
 - ✅ have a coffee
 - ✅ enjoy life
-- 🔥 setup the project
+- ✅  setup the project
+- 🔥 write the tests
+- ❌ CI\CD
 - ❌ write the CMake files for the queue and the tests
-- ❌ write the tests
 - ❌ implement the queue
-- ❌ CI\CD support
 - ❌ performance tests
 - ❌ platform tests
 
@@ -29,24 +29,38 @@ This project project implements a static queue in C.
 ### features
 1. the queue must be initialize in order to be use
 2. an object *can* be **aded** to the queue
-3. object *can* be **remove** of the queue
-4. the queue *must* behaves like a **FIFO** buffer
-5. an object *can* be **consume**
-6. when an object is consume, it *must* be **removed** of the queue
-7. an object *can* be **peek**
-8. when en **object** is peek, it *must* stay in the queue and its place *doesn't change*
-9. the queue has a **limited** number of object
-10. the queue capacity *must* be **configured** at compile time
-11. the queue capacity *can't* **change** during execution
-12. the queue must be destroy after use
+3. an object *can* be **consume**
+4. when an object is consume, it *must* be **removed** of the queue
+5. an object *can* be **peek**
+6. when en **object** is peek, it *must* stay in the queue and the object is not dequeue
+7.  it is *possible* to know to know the **number** of object in the queue 
+8.  the queue has a **limited** number of object
+9.  the queue capacity *must* be **configured** at compile time
+10. the queue capacity *can't* **change** during execution
+11. the queue must be destroy after use
 ### perfomances
 11. the queue *must* be memory efficient
 12. the queue *must not* use dynamic allocation
 
 ## unit-tests
-| Requirements # | Test description |
-|:---------------|:-----------------|
-| 1 | after the initialization the queue size must be equal to to the maximal size of the queue |
+| Req. # | Test description | condition(s) |
+|:-------|:-----------------|:-------------|
+| 1 a. | after the initialization the queue size is 0 |
+| 1 b. | after the initialization the queue is empty |
+| 2 a. | adding an object to the queue size increases size by 1 |
+| 2 b. | the object is added to the queue | the queue is not full
+| 2 c. | the queue returns true | the object has been enqueued correctly
+| 2 d. | the queue returns false | the queue is full
+| 4 a. | consuming an object returns the oldest object of the queue | the queue is not empty |
+| 4 b. | if the queue is empty consuming an object returns null | the queue is empty |
+| 4 c. | after consuming an object the queue size decreases by 1 | the queue is not empty |
+| 5 a. | peeking the queue return the oldest queue's object | the queue is not empty |
+| 5 b. | peeking an empty queue return null | the queue is empty |
+| 6 a. | peeking an object doesn't change the queue's size |
+| 6 b. | peeking an object doesn't remove the object from the queue |  
+
+
+
 
 - object are added at the rear of the queue
 - add an element to the queue increase its size of 1
