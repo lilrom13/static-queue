@@ -14,8 +14,8 @@
 - ✅ enjoy life
 - ✅  setup the project
 - 🔥 write the tests
+- 🔥 write the CMake files for the queue and the tests
 - ❌ CI\CD
-- ❌ write the CMake files for the queue and the tests
 - ❌ implement the queue
 - ❌ performance tests
 - ❌ platform tests
