@@ -33,7 +33,7 @@ This project project implements a static queue in C.
 4. when an object is consume, it *must* be **removed** of the queue
 5. an object *can* be **peek**
 6. when en **object** is peek, it *must* stay in the queue and the object is not dequeue
-7.  it is *possible* to know to know the **number** of object in the queue 
+7.  it is *possible* to know the **number** of object in the queue 
 8.  the queue has a **limited** number of object
 9.  the queue capacity *must* be **configured** at compile time
 10. the queue capacity *can't* **change** during execution
@@ -57,8 +57,8 @@ This project project implements a static queue in C.
 | 5 a. | peeking the queue return the oldest queue's object | the queue is not empty |
 | 5 b. | peeking an empty queue return null | the queue is empty |
 | 6 a. | peeking an object doesn't change the queue's size |
-| 6 b. | peeking an object doesn't remove the object from the queue |  
-
+| 6 b. | peeking an object doesn't remove the it from the queue |
+| 7    | size return the number of object currently in the queue |
 
 
 
