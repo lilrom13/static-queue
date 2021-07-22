@@ -8,7 +8,7 @@
 
 # TODO
 
-🔥 while in project, ❌ not done wet ✅ done
+🔥 while in progress, ❌ not done wet ✅ done
 
 - ✅ have a coffee
 - ✅ enjoy life
