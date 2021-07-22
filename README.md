@@ -1,5 +1,6 @@
 - [TODO](#todo)
-- [C static queue implementation](#c-static-queue-implementation)
+- [C static queue](#c-static-queue)
+  - [description](#description)
   - [requirements](#requirements)
     - [features](#features)
     - [perfomances](#perfomances)
@@ -20,9 +21,11 @@
 - ❌ performance tests
 - ❌ platform tests
 
-# C static queue implementation
+# C static queue
 
-This project project implements a static queue in C.
+## description
+
+static - size determined at pre-processing level- [Queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) implementation.
 
 ## requirements
 
