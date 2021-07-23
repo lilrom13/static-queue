@@ -61,7 +61,7 @@ static - size determined at pre-processing level- [Queue](https://en.wikipedia.o
 | 5 b. | peeking an empty queue return null | the queue is empty |
 | 6 a. | peeking an object doesn't change the queue's size |
 | 6 b. | peeking an object doesn't remove the it from the queue |
-| 7    | size return the number of object currently in the queue |
+| 7    | size returns the number of object currently in the queue |
 
 
 
